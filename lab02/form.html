@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+        <meta charset="utf-8">
+        <style>
+            #order {
+                background-color:lightgreen
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Form</h1>
+       <form name="coffee" method="get" action="#" id="style-form.css">
+           <p>Drink Type: <br>
+               <input type="radio" name="drinktype" value="americano">Americano <br>
+                <input type="radio" name="drinktype2" value="cappuccino">Cappuccino <br>
+               <input type="radio" name="drinktype3" value="latte">Latte <br>
+               <input type="radio" name="drinktype4" value="macchiato">Macchiato <br>
+               <input type="radio" name="drinktype5" value="mocha">Mocha <br>
+            </p>
+           <p>
+                   <form name="selectexample" action="#" method="get">
+                        <select name="color">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                <p>Flavors and Extras: <br>
+               <input type="checkbox" name="flavors" value="espresso">Extra Espresso Shot <br>
+                <input type="checkbox" name="flavors2" value="caramel">Caramel Shot <br>
+               <input type="checkbox" name="flavors3" value="hazelnut">Hazelnut <br>
+               <input type="checkbox" name="flavors4" value="vanilla">Vanilla Shot <br>
+                       </p>
+        </form>
+        <form>
+           <p>Order For (name): <input type="text" name="orderfor"></p>
+           <p><input type="submit" value="Order!" class="order" id="order"></p>
+        </form> 
+    </body>
+</html>
