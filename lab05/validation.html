@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>Lab 05</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+        <script>
+            function formValidate() {
+                var first_name = document.getElementById("firstName").value;
+                    if (first_name == "") {
+                        
+                    } else {
+                        alert(first_name)
+                    }
+                var last_name = document.getElementById("lastName").value;    
+                var email_address = document.getElementById("emailAddress").value; 
+                last_name = last_name.trim();
+                first_name = first_name.trim();
+                email_address = email_address.trim();
+                if (first_name == "")
+                if (email_address == "")
+                
+            }
+        </script>
+		<form id="testForm" name="testForm" action=#ß method="get" onsubmit="formValidate();">
+			<p>First Name: <input type="text" id="firstName" name="firstName"></p>
+			<p>Last Name: <input type="text" id="lastName" name="lastName"></p>
+            <p>Email Address: <input type="text" id="emailAddress" name="emailAddress"></p>
+			<p><input type="submit" id="submit" name="submit" value="Submit"></p>
+		</form>
+	</body>
+</html>
