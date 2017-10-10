@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 4</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+                function check() {
+                    var first = document.name.firstname.value;
+                    var second = document.name.middleinitial.value;
+                    var third = document.name.lastname.value;
+                    var fourth = document.name.fullname.value;
+                    
+                    first.trim();
+                    second.trim();
+                    third.trim();
+                    
+                    first = first.toUpperCase();
+                    second = second.toUpperCase();
+                    third = third.toUpperCase();
+                    
+                    document.name.fullname.value = first + " " + second + " " + third;
+                    
+                    document.getElementById("fullname").innerHTML = first + " " + second + " " + third; 
+                }
+        </script>
+        <h2>Name Cleanup</h2>
+        <form name="name" id="name" action="#" method"get">
+            <p>First Name: <br><input type="text" name="firstname" id="firstname"></p>
+            <p>Middle Initial: <br><input type="text" name="middleinitial" id="middleinitial"></p>
+            <p>Last Name: <br><input type="text" name="lastname" id="lastname"></p>
+            
+            <p><input type="button" name="cleanup" id="cleanup" value="Cleanup Name" onclick="check()"></p>
+            
+            <p>Full Name: <br><input type="text" name="fullname" id="fullname"></p>
+        </form>
+    </body>
+</html>
+
