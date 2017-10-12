@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Temp Converter 2.0</title>
+  </head>
+  <body>
+      <h1>Temperature Converter</h1>
+      <script>
+          
+          function tempConvert(){
+              if(document.getElementById("ftoc").checked == true){
+                  var f;
+              f = document.tempconverter.tempinF.value;
+              var c;
+              c = (f-32)*(5/9);
+              
+              document.tempconverter.tempinC.value = c;
+              
+              document.tempconverter.tempinC.style.backgroundColor = "#99ffcc";
+              document.tempconverter.tempinF.style.backgroundColor = "#ffffff";
+              } else if(document.getElementById("ctof").checked == true){
+                var f;
+              
+              var c;
+              c = document.tempconverter.tempinC.value;
+              f = (c*(9/5))+32;
+              
+              document.tempconverter.tempinF.value = f;
+              
+              document.tempconverter.tempinF.style.backgroundColor = "#99ffcc";
+              document.tempconverter.tempinC.style.backgroundColor = "#ffffff";
+              }
+          }
+          
+      </script>
+      <form name="tempconverter" id="tempconverter" action="#" method="get">
+          <p>Temperature in Fahrenheit:<br><input type="text" name="tempinf" id="tempinf"></p>
+          <p><input type="radio" name="convert" id="ftoc" value="F to C">F to C</p>
+          <p><input type="radio" name="convert" id="ctof" value="C to F">C to F</p>
+          <p>Temperature in Celcius:<br><input type="text" name="tempinC" id="tempinC"></p>
+          <p><input type="button" name="go" id="go" value="Convert" onclick="tempConvert();"></p>
+      </form>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 06</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function now() {
+                alert ("test");
+                    var correct; 
+                    var guess;
+                    guess = document.getElementById("guess").value;
+                    correct = 6;
+                    if (guess() == ""){
+                        alert ("nothing entered");
+                        document.number.guess.focus();
+                        return false;
+                    }
+                        else if (isNaN(guess == true){
+                        alert ("the guess is not a number");
+                        document.number.guess.select();
+                        return false;
+                    }
+                        else if (guess < 1 || guess > 10 ){
+                        alert("Your number is invalid");
+                        document.number.guess.select();
+                        return false;
+                    }
+                        else if (guess < 6){
+                        alert("try a larger number");
+                        document.number.guess.select();
+                        return false;
+                    }
+                        else if (guess > 6){
+                        alert ("try a lower number");
+                        document.number.guess.select();
+                        return false;
+                    }
+                        else (guess == 6){
+                        alert ("You guessed the correct number!");
+                        return true;
+                    }
+                    }
+        </script>
+        <h3>Exercise 06</h3>
+        <form id="number" name="number" method="get" action="#" onsubmit="return now();">
+            <p>Guess the number! <input type="text" id="guess" name="guess"></p>
+            <input type="submit" name="go" id="go" value="Guess!">
+        </form>
+    </body>
+</html>
