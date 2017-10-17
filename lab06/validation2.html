@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Lab 06 Task 1: Validation</title>
+        <script>
+                function formValidate(){
+                    //alert("");
+                    var firstName;
+                    var lastName;
+                    var email;
+                    var age;
+                    
+                    fname = document.getElementById("firstName").value;
+                    lname = document.getElementById("lastName").value;
+                    email = document.getElementById("email").value;
+                    age=document.getElementById("age").value;
+                    
+                    if (firstName == ""){
+                        alert("This first name was not entered");
+                        return false;
+                    }
+                    else if (lastName == ""){
+                        alert("This last name was not entered");
+                        return false;
+                    }
+                    else if (email == ""){
+                        alert("This email address was not entered");
+                        return false;
+                    }
+                    else if (email.endsWith("@uwec.edu") == false){
+                        alert("This email address needs to end with @uwec.edu");
+                        return false;
+                    }
+                    else if (age == ""){
+                        alert ("This age was not entered");
+                        document.validate.age.focus();
+                        return false;
+                    }
+                    else if (isNaN (age) == true){
+                        alert ("This age needs to be entered as a number");
+                        document.validate.age.focus();
+                        return false;
+                    }
+                    else if (age < "18"){
+                        alert ("the age must be 18 or over")
+                        document.validate.age.focus();
+                        return false;
+                    }
+                    else {
+                        return true;
+                    }
+            }
+        </script>
+    </head>
+    <body>
+  
+        <form id="validate" name="validate" method="get" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" onsubmit="return formValidate();">
+            <p> First Name:
+                <input type="text" id="firstName" name="firstName"></p>
+            <p> Last Name:
+                <input type="text" id="lastName" name="firstName"></p>
+            <p> Email Address:    
+                <input type="text" id="email" name="fname"></p>
+            <p>Age:
+                <input type="text" id="age" name="age"></p>
+            <input type="submit" id="val" name="val" value="Submit">
+        </form>
+    </body>
+</html>
