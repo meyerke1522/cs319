@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Task 03</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function validateAge(){
+                
+                var age;
+                
+                
+                age = document.getElementById("age").value;
+        
+                age = age.trim();
+                
+                if (age == "") {
+                    alert("Enter your age");
+                    document.checkAge.age.focus();
+                    return false;
+                }else{
+                    return true;
+                }
+                
+                
+            }
+        </script>
+        <form name="checkAge" id="checkAge" action="#" method="get" onsubmit = "return validateAge();">
+            <p>How old are you?<br>
+            <input type="text" name="age" id="age"></p>
+            <p><input type="submit" name="submit=" id="submit" value="Submit"></p>
+        </form>
+    </body>
+</html>
